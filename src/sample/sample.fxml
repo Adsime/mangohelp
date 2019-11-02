@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.CanvasController">
+    <center>
+        <!--<Canvas fx:id="myCanvas" height="289.0" onMouseClicked="#onClick" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" width="670.0" BorderPane.alignment="CENTER" />-->
+    </center>
+   <right>
+      <VBox prefHeight="400.0" prefWidth="195.0" BorderPane.alignment="CENTER">
+         <children>
+            <ColorPicker fx:id="borderColor" promptText="Border color" />
+            <ColorPicker fx:id="fillColor" promptText="Fill color" />
+            <CheckBox fx:id="filled" mnemonicParsing="false" text="Filled" />
+            <ComboBox fx:id="shapeType" prefWidth="150.0" promptText="Shape" />
+            <Button onMouseClicked="#clearCanvas" mnemonicParsing="false" text="NUKE EM BITHCES" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <Pane fx:id="test" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
